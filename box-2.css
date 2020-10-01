@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.title {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    letter-spacing: 3px;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.4);
+    
+
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.container .card {
+    width: 80%;
+    height: 90%;
+    margin: 50px auto;
+    border-radius: 48% 48% 0 0/35% 35% 0 0;
+    position: relative;
+    overflow: hidden;
+}
+.container .card:nth-child(1) {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4), 0 20px #006BB6 inset;
+    color: #006BB6;
+}
+.container .card:nth-child(2) {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4), 0 20px #76B713 inset;
+    color: #76B713;
+}
+.container .card:nth-child(3) {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4), 0 20px #F12B37 inset;
+    color: #F12B37;
+}
+.card .iconify {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 80px;
+    height: 80px;
+}
+.card .contents {
+   position: absolute;
+   top: 40%;
+   left: 0%;
+}
+.contents h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+.contents p {
+    padding: 20px;
+    text-align: center;
+    color: #000;
+}
+.contents .more {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 60px 60px 0px;
+    transform: translateX(-100%);
+    transition: 1.5s;
+}
+.card:nth-child(1) .more{
+    background: linear-gradient(#0b3f64, #006BB6);
+}
+.card:nth-child(2) .more {
+    background: linear-gradient(#3d6305, #76B713);
+}
+.card:nth-child(3) .more {
+    background: linear-gradient(#7a0e15, #F12B37);
+}
+
+.more a {
+    text-decoration: none;
+    color: #fff;
+}
+.card:hover .more {
+    transform: translateX(0%);
+}
+@media (min-width:700px) {
+    .title {
+        top: 10%;
+        font-size: 4rem;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .card {
+        margin: 0px 10px;
+        width: 25%;
+        height: 80%;
+    }
+}
